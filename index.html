@@ -23,9 +23,9 @@
     <meta property="og:title" content="Faqih Nur Rahman - Fullstack Software Engineer">
     <meta property="og:description"
         content="Portfolio profesional Faqih Nur Rahman - Fullstack Software Engineer dengan 5+ tahun pengalaman. Spesialisasi dalam Laravel, Vue.js, React, dan teknologi modern.">
-    <meta property="og:image" content="https://laksfaqih.my.id/assets/img/laks.png">
-    <meta property="og:image:width" content="1523">
-    <meta property="og:image:height" content="2243">
+    <meta property="og:image" content="https://laksfaqih.my.id/assets/img/laks.webp">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="772">
     <meta property="og:locale" content="id_ID">
     <meta property="og:site_name" content="Faqih Nur Rahman Portfolio">
 
@@ -35,7 +35,7 @@
     <meta property="twitter:title" content="Faqih Nur Rahman - Fullstack Software Engineer">
     <meta property="twitter:description"
         content="Portfolio profesional Faqih Nur Rahman - Fullstack Software Engineer dengan 5+ tahun pengalaman.">
-    <meta property="twitter:image" content="https://laksfaqih.my.id/assets/img/laks.png">
+    <meta property="twitter:image" content="https://laksfaqih.my.id/assets/img/laks.webp">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://laksfaqih.my.id/">
@@ -80,7 +80,7 @@
 
     <!-- Preload Critical Resources -->
     <link rel="preload" href="style.css" as="style">
-    <link rel="preload" href="assets/img/laks.png" as="image">
+    <link rel="preload" href="assets/img/laks.webp" as="image" type="image/webp">
     <link rel="preload" href="assets/img/bg.webp" as="image" type="image/webp">
 
     <!-- Stylesheets -->
@@ -96,7 +96,7 @@
       "@type": "Person",
       "name": "Faqih Nur Rahman",
       "url": "https://laksfaqih.my.id",
-      "image": "https://laksfaqih.my.id/assets/img/laks.png",
+      "image": "https://laksfaqih.my.id/assets/img/laks.webp",
       "jobTitle": "Fullstack Software Engineer",
       "worksFor": {
         "@type": "Organization",
@@ -121,8 +121,18 @@
     <div class="container">
         <!-- Profile Image -->
         <div class="profile-image">
-            <img src="assets/img/laks.png" alt="Faqih Nur Rahman - Fullstack Software Engineer Profile Photo"
-                id="profileImg" width="200" height="200" loading="eager">
+            <picture>
+                <source srcset="assets/img/laks.webp" type="image/webp">
+                <source srcset="assets/img/laks.png" type="image/png">
+                <img src="assets/img/laks.png" 
+                     alt="Faqih Nur Rahman - Fullstack Software Engineer Profile Photo"
+                     id="profileImg" 
+                     width="200" 
+                     height="200" 
+                     loading="eager"
+                     decoding="async"
+                     fetchpriority="high">
+            </picture>
         </div>
 
         <!-- Name -->

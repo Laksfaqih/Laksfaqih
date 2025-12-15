@@ -1,6 +1,26 @@
 // Add smooth animations and interactions
 document.addEventListener('DOMContentLoaded', function() {
     
+    // Progressive Image Loading
+    const profileImg = document.getElementById('profileImg');
+    
+    // Image loading optimization
+    if (profileImg) {
+        // Add loaded class when image is fully loaded
+        if (profileImg.complete) {
+            profileImg.classList.add('loaded');
+        } else {
+            profileImg.addEventListener('load', function() {
+                this.classList.add('loaded');
+            });
+        }
+        
+        // Handle missing profile image gracefully
+        profileImg.addEventListener('error', function() {
+            this.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150"%3E%3Crect width="150" height="150" fill="%23667eea"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="60" fill="white"%3E?%3C/text%3E%3C/svg%3E';
+        });
+    }
+    
     // Typing Effect for Job Title
     const typingText = document.getElementById('typingText');
     const textToType = 'Fullstack Software Engineer';
@@ -38,14 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Profile image click effect
-    const profileImg = document.getElementById('profileImg');
-    
-    // Handle missing profile image gracefully
-    profileImg.addEventListener('error', function() {
-        this.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150"%3E%3Crect width="150" height="150" fill="%23667eea"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="60" fill="white"%3E?%3C/text%3E%3C/svg%3E';
-    });
-
     // Add entrance animation to links
     socialLinks.forEach((link, index) => {
         link.style.opacity = '0';
@@ -67,6 +79,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Card now uses CSS :hover on all devices (desktop and mobile)
     // Mobile browsers will trigger hover on tap/touch automatically
+    
+    // Performance monitoring (optional)
+    if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+            for (const entry of list.getEntries()) {
+                if (entry.entryType === 'largest-contentful-paint') {
+                    console.log('LCP:', entry.renderTime || entry.loadTime);
+                }
+            }
+        });
+        observer.observe({ entryTypes: ['largest-contentful-paint'] });
+    }
 });
 
 // Add scroll reveal effect (if needed for future sections)

@@ -32,6 +32,21 @@ body::after {
     will-change: transform;
 }
 
+/* Mobile optimization - reduce blur for performance */
+@media (max-width: 768px) {
+    body::after {
+        background-image: url('assets/img/bg-mobile.webp');
+        filter: blur(2px);
+    }
+}
+
+@media (max-width: 480px) {
+    body::after {
+        background-image: url('assets/img/bg-mobile.webp');
+        filter: blur(1.5px);
+    }
+}
+
 /* Fallback for browsers that don't support WebP */
 @supports not (background: url('image.webp')) {
     body::after {
@@ -79,6 +94,25 @@ body::before {
     display: inline-block;
 }
 
+/* Image loading placeholder */
+.profile-image img {
+    background: linear-gradient(90deg, rgba(255,0,0,0.1) 0%, rgba(255,0,0,0.2) 50%, rgba(255,0,0,0.1) 100%);
+    background-size: 200% 100%;
+}
+
+.profile-image img[src] {
+    animation: shimmer 1.5s ease-in-out;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
 /* Hexagon Pattern Background */
 .profile-image::before {
     content: '';
@@ -96,6 +130,21 @@ body::before {
     z-index: -1;
     opacity: 0.6;
     animation: hexagonRotate 20s linear infinite;
+}
+
+/* Disable heavy animations on mobile for better performance */
+@media (max-width: 768px) {
+    .profile-image::before {
+        animation: hexagonRotate 30s linear infinite;
+        opacity: 0.4;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image::before {
+        animation: none;
+        opacity: 0.3;
+    }
 }
 
 @keyframes hexagonRotate {
@@ -126,6 +175,21 @@ body::before {
     transition: all 0.4s ease;
     position: relative;
     z-index: 2;
+}
+
+/* Simplify box-shadow on mobile for better performance */
+@media (max-width: 768px) {
+    .profile-image img {
+        box-shadow: 
+            0 0 0 2px rgba(255, 0, 0, 0.3),
+            0 5px 20px rgba(0, 0, 0, 0.5);
+    }
+    
+    .profile-image img:hover {
+        box-shadow: 
+            0 0 0 2px rgba(255, 0, 0, 0.5),
+            0 8px 30px rgba(0, 0, 0, 0.6);
+    }
 }
 
 .profile-image img:hover {
