@@ -2,7 +2,7 @@
 
 Welcome to my personal website repository. This website showcases my professional profile, resume, and portfolio with full SEO optimization and modern web performance.
 
-![Website Screenshot](assets/img/bg.webp)
+![Website Screenshot](assets/img/image.png)
 
 ## Table of Contents
 - [About](#about)
