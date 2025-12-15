@@ -932,7 +932,10 @@
     <div id="certificateModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal()">&times;</span>
-            <img src="assets/img/e-certificate.jpg" alt="Certificate">
+            <picture>
+                <source srcset="assets/img/e-certificate.webp" type="image/webp">
+                <img src="assets/img/e-certificate.jpg" alt="Certificate" loading="lazy">
+            </picture>
         </div>
     </div>
 
