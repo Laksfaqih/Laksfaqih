@@ -1,0 +1,676 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background with blur effect - Optimized with WebP */
+body::after {
+    content: '';
+    position: fixed;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: url('assets/img/bg.webp') no-repeat center center;
+    background-size: cover;
+    filter: blur(3px);
+    z-index: -2;
+    will-change: transform;
+}
+
+/* Fallback for browsers that don't support WebP */
+@supports not (background: url('image.webp')) {
+    body::after {
+        background-image: url('assets/img/bg.jpg');
+    }
+}
+
+/* Dark overlay for better readability */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Profile Image */
+.profile-image {
+    margin-bottom: 25px;
+    position: relative;
+    animation: fadeIn 0.8s ease-out 0.2s both;
+    display: inline-block;
+}
+
+/* Hexagon Pattern Background */
+.profile-image::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 320px;
+    background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 35px, rgba(255, 0, 0, 0.15) 35px, rgba(255, 0, 0, 0.15) 36px),
+        repeating-linear-gradient(60deg, transparent, transparent 35px, rgba(255, 0, 0, 0.15) 35px, rgba(255, 0, 0, 0.15) 36px),
+        repeating-linear-gradient(120deg, transparent, transparent 35px, rgba(255, 0, 0, 0.15) 35px, rgba(255, 0, 0, 0.15) 36px);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.6;
+    animation: hexagonRotate 20s linear infinite;
+}
+
+@keyframes hexagonRotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.profile-image picture {
+    display: inline-block;
+    position: relative;
+}
+
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%;
+    border: 4px solid #ff0000;
+    box-shadow: 
+        0 0 0 2px rgba(255, 0, 0, 0.3),
+        0 10px 40px rgba(0, 0, 0, 0.5),
+        0 0 60px rgba(255, 0, 0, 0.4);
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.profile-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 0 0 2px rgba(255, 0, 0, 0.5),
+        0 15px 50px rgba(0, 0, 0, 0.6),
+        0 0 80px rgba(255, 0, 0, 0.6);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Name - Changed to h1 for SEO */
+.name {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.8s ease-out 0.3s both;
+    white-space: nowrap;
+}
+
+/* Job Title - Changed to h2 for SEO */
+.title {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 35px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.8s ease-out 0.4s both;
+    min-height: 1.8rem;
+}
+
+/* Typing Cursor Animation */
+.typing-cursor {
+    display: inline-block;
+    color: red;
+    font-weight: 400;
+    animation: blink 0.7s infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+/* Social Card from modify folder */
+.card {
+    position: relative;
+    height: 300px;
+    width: 230px;
+    margin: 0 auto 40px;
+    animation: fadeIn 0.8s ease-out 0.5s both;
+}
+
+.card .boxshadow {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 1px solid red;
+    transform: scale(0.8);
+    box-shadow: rgb(255, 0, 0) 0px 30px 70px 0px;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.card .main {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: red;
+    background: linear-gradient(0deg, rgb(62, 0, 0) 0%, rgb(255, 0, 0) 60%, rgb(62, 0, 0) 100%);
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0 calc(100% - 40px));
+    box-shadow: rgb(255, 0, 0) 0px 7px 29px 0px;
+    transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.card .main .top {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    z-index: 2;
+    border-top: 115px solid black;
+    border-left: 115px solid transparent;
+    border-right: 115px solid transparent;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.card .main .side {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    transform: translateX(-50%);
+    height: 101%;
+    background: black;
+    clip-path: polygon(0% 0%, 50% 0, 95% 45%, 100% 100%, 0% 100%);
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s;
+}
+
+.card .main .left {
+    left: 0;
+}
+
+.card .main .right {
+    right: 0;
+    transform: translateX(50%) scale(-1, 1);
+}
+
+.card .main .title {
+    position: absolute;
+    left: 28%;
+    bottom: 140px;
+    transform: translateX(-50%);
+    font-weight: 800;
+    font-size: 25px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: all 0.2s ease-out 0s;
+    color: white;
+    pointer-events: none;
+}
+
+.card .main .button-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+}
+
+.card .main .button-container .button {
+    position: absolute;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    clip-path: polygon(0 0, 100% 0, 81% 100%, 21% 100%);
+    background: black;
+    border: none;
+    color: white;
+    display: grid;
+    place-content: center;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.card .main .button-container .button .svg {
+    width: 15px;
+    transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.card .main .button-container .button:nth-child(1) {
+    bottom: 300px;
+    transition-delay: 0.4s;
+}
+
+.card .main .button-container .button:nth-child(2) {
+    bottom: 300px;
+    transition-delay: 0.6s;
+}
+
+.card .main .button-container .button:nth-child(3) {
+    bottom: 300px;
+    transition-delay: 0.8s;
+}
+
+.card .main .button-container .button:hover .svg {
+    transform: scale(1.2);
+}
+
+.card .main .button-container .button:active .svg {
+    transform: scale(0.7);
+}
+
+.card:hover .main {
+    transform: scale(1.1);
+}
+
+.card:hover .main .top {
+    top: -50px;
+}
+
+.card:hover .main .left {
+    left: -50px;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s;
+}
+
+.card:hover .main .right {
+    right: -50px;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s;
+}
+
+.card:hover .main .title {
+    opacity: 1;
+    z-index: 3;
+    visibility: visible;
+    transition: all 0.2s ease-out 1.3s;
+}
+
+.card:hover .main .button-container .button:nth-child(1) {
+    bottom: 80px;
+    transition-delay: 0.8s;
+}
+
+.card:hover .main .button-container .button:nth-child(2) {
+    bottom: 40px;
+    transition-delay: 0.6s;
+}
+
+.card:hover .main .button-container .button:nth-child(3) {
+    bottom: 0;
+    transition-delay: 0.4s;
+}
+
+/* Social Icons (Top Row) */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    animation: fadeIn 0.8s ease-out 0.5s both;
+}
+
+.icon-link {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+}
+
+.icon-link:hover {
+    background: rgba(255, 255, 255, 0.95);
+    color: #000;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.icon-link::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+}
+
+.icon-link:hover::after {
+    transform: translateX(-50%) scale(1);
+}
+
+/* Social Links (Buttons) */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 40px;
+    animation: fadeIn 0.8s ease-out 0.6s both;
+}
+
+.social-link {
+    --c1: #fff;
+    --c2: #ff0000;
+    --size-letter: 18px;
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0.5em 1em;
+    font-size: var(--size-letter);
+    
+    background-color: transparent;
+    border: calc(var(--size-letter) / 6) solid var(--c2);
+    border-radius: 0.2em;
+    text-decoration: none;
+    color: var(--c2);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
+    transition: color 700ms cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.social-link::after {
+    content: "";
+    width: 0;
+    height: calc(300% + 1em);
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(30deg);
+    
+    background-color: var(--c2);
+    transition: 1000ms cubic-bezier(0.83, 0, 0.17, 1);
+    z-index: -1;
+}
+
+.social-link i {
+    font-size: 1.2rem;
+}
+
+.social-link:hover {
+    color: var(--c1);
+}
+
+.social-link:hover::after {
+    width: calc(120% + 1em);
+}
+
+.social-link:hover i {
+    color: var(--c1);
+}
+
+.social-link:active {
+    scale: 0.98;
+    filter: brightness(0.9);
+}
+
+/* Footer */
+.footer {
+    padding-top: 25px;
+    padding-bottom: 30px;
+    margin-top: 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeIn 0.8s ease-out 0.7s both;
+}
+
+.footer p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+
+/* Tablet (Landscape) & Small Desktop */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        max-width: 600px;
+    }
+    
+    .name {
+        font-size: 2.5rem;
+    }
+    
+    .title {
+        font-size: 1.2rem;
+    }
+    
+    .profile-image img {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .profile-image::before {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .card {
+        height: 280px;
+        width: 210px;
+    }
+}
+
+/* Tablet (Portrait) */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .name {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+
+    .title {
+        font-size: 1.1rem;
+    }
+
+    .profile-image img {
+        width: 170px;
+        height: 170px;
+        border-width: 3px;
+    }
+
+    .profile-image::before {
+        width: 280px;
+        height: 280px;
+    }
+
+    .social-link {
+        font-size: 0.95rem;
+        padding: 12px 20px;
+    }
+
+    .icon-link {
+        width: 55px;
+        height: 55px;
+        font-size: 1.3rem;
+    }
+
+    .card {
+        height: 300px;
+        width: 230px;
+        cursor: pointer;
+    }
+
+    /* Remove mobile-specific overrides - use desktop behavior */
+    /* Default state matches desktop */
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    
+    .container {
+        max-width: 100%;
+    }
+    
+    .name {
+        font-size: 1.8rem;
+        letter-spacing: 0.5px;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    .profile-image img {
+        width: 150px;
+        height: 150px;
+        border-width: 3px;
+    }
+
+    .profile-image::before {
+        width: 240px;
+        height: 240px;
+    }
+
+    .social-link {
+        font-size: 0.9rem;
+        padding: 11px 18px;
+    }
+
+    .icon-link {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .card {
+        height: 260px;
+        width: 190px;
+        cursor: pointer;
+    }
+
+    .card .main .title {
+        font-size: 20px;
+        top: 80px;
+    }
+
+    /* Adjust top triangle size for smaller card */
+    .card .main .top {
+        border-top: 130px solid black;
+        border-left: 95px solid transparent;
+        border-right: 95px solid transparent;
+    }
+
+    /* Mobile uses same hover animations as desktop */
+}
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 600px;
+    }
+    
+    .name {
+        font-size: 2.8rem;
+    }
+    
+    .title {
+        font-size: 1.4rem;
+    }
+    
+    .profile-image img {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .profile-image::before {
+        width: 340px;
+        height: 340px;
+    }
+}

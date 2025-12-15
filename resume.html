@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Resume - Faqih Nur Rahman | Fullstack Software Engineer</title>
+    <meta name="title" content="Resume - Faqih Nur Rahman | Fullstack Software Engineer">
+    <meta name="description" content="Professional resume of Faqih Nur Rahman - Fullstack Software Engineer with expertise in Laravel, React, PHP, JavaScript, and modern web technologies. View detailed experience, skills, and education.">
+    <meta name="keywords" content="Faqih Nur Rahman Resume, CV, Fullstack Developer CV, Laravel Developer Resume, Software Engineer Experience, PHP Developer, React Developer">
+    <meta name="author" content="Faqih Nur Rahman">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://laksfaqih.my.id/resume.html">
+    <meta property="og:title" content="Resume - Faqih Nur Rahman | Fullstack Software Engineer">
+    <meta property="og:description" content="Professional resume showcasing 5+ years of experience in fullstack development with Laravel, React, and modern technologies.">
+    <meta property="og:image" content="https://laksfaqih.my.id/assets/img/laks.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://laksfaqih.my.id/resume.html">
+    <meta property="twitter:title" content="Resume - Faqih Nur Rahman">
+    <meta property="twitter:description" content="Professional resume showcasing 5+ years of experience in fullstack development.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://laksfaqih.my.id/resume.html">
+
+    <!-- ============================================
+         FAVICON & PWA CONFIGURATION
+         ============================================ -->
+
+    <!-- Primary Favicon (Modern Browsers) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+
+    <!-- Legacy ICO Support (IE, Old Browsers) -->
+    <link rel="shortcut icon" href="/favicons/favicon.ico">
+
+    <!-- Apple Touch Icon (iOS Safari, iPad) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+
+    <!-- Android Chrome PWA Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicons/android-chrome-512x512.png">
+
+    <!-- Web App Manifest (PWA Support) -->
+    <link rel="manifest" href="/favicons/site.webmanifest">
+
+    <!-- Theme Color (Mobile Browser Address Bar) -->
+    <meta name="theme-color" content="#ff0000">
+    <meta name="msapplication-TileColor" content="#ff0000">
+
+    <!-- iOS Web App Capable -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="FNR Portfolio">
+
+    <!-- Android/Chrome -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="FNR Portfolio">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" media="all">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: #333;
+        }
+
+        .resume-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header-actions {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .back-btn {
+            padding: 12px 24px;
+            border: 2px solid #ff0000;
+            background: transparent;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .back-btn:hover {
+            background: #ff0000;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 0, 0, 0.4);
+        }
+
+        /* Card Style from Uiverse.io */
+        .resume-container {
+            background-color: #24233b;
+            border-radius: 8px;
+            box-shadow: 0px 10px 10px rgb(73, 70, 92);
+            transition: 0.5s;
+            position: relative;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        .resume-container:hover {
+            transform: translateY(-7px);
+            box-shadow: 0px 10px 10px black;
+        }
+
+        .card-top {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .circle {
+            padding: 0 4px;
+        }
+
+        .circle2 {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+        }
+
+        .red {
+            background-color: #ff605c;
+        }
+
+        .yellow {
+            background-color: #ffbd44;
+        }
+
+        .green {
+            background-color: #00ca4e;
+        }
+
+        .card-title {
+            color: white;
+            padding-left: 20px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .code-container {
+            background-color: rgb(73, 70, 92);
+            padding: 30px 40px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .code-container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .code-container::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .code-container::-webkit-scrollbar-thumb {
+            background: #ff0000;
+            border-radius: 4px;
+        }
+
+        .resume-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .resume-header h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .resume-header .subtitle {
+            font-size: 1.2rem;
+            color: #ff605c;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .resume-header .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .contact-info a {
+            color: #ccc;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #ffbd44;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            display: inline-block;
+            font-weight: 700;
+        }
+
+        .summary-text {
+            color: #ccc;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-category {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .skill-category h4 {
+            color: #ffbd44;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            color: #ccc;
+            padding: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        .skill-category li::before {
+            content: "▸ ";
+            color: #00ca4e;
+            font-weight: bold;
+        }
+
+        .experience-item,
+        .education-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover,
+        .education-item:hover {
+            background: rgba(0, 0, 0, 0.4);
+            transform: translateX(5px);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .job-title {
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .company {
+            color: #ff605c;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        .date {
+            color: #ffbd44;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .job-description {
+            color: #ccc;
+            line-height: 1.7;
+            margin-top: 10px;
+        }
+
+        .job-description ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .job-description li {
+            margin-bottom: 8px;
+        }
+
+        .certificate-item {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .certificate-info h4 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .certificate-info p {
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        .certificate-link {
+            color: #ffbd44;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .certificate-link:hover {
+            color: #00ca4e;
+            text-decoration: underline;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            animation: zoomIn 0.3s ease;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-modal:hover {
+            color: #ff0000;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Tablet (Landscape) & Small Desktop */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .resume-wrapper {
+                max-width: 850px;
+            }
+            
+            .resume-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .resume-header .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Tablet (Portrait) */
+        @media (max-width: 768px) {
+            body {
+                padding: 30px 15px;
+            }
+            
+            .header-actions {
+                margin-bottom: 25px;
+            }
+            
+            .back-btn {
+                padding: 10px 20px;
+                font-size: 0.95rem;
+            }
+            
+            .code-container {
+                padding: 20px 15px;
+            }
+
+            .resume-header h1 {
+                font-size: 2rem;
+            }
+            
+            .resume-header .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .contact-info {
+                gap: 15px;
+            }
+            
+            .contact-info a {
+                font-size: 0.85rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .summary-text {
+                font-size: 0.95rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .job-title {
+                font-size: 1.1rem;
+            }
+
+            .certificate-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+        
+        /* Mobile */
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 10px;
+            }
+            
+            .header-actions {
+                margin-bottom: 20px;
+            }
+            
+            .back-btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+            
+            .code-container {
+                padding: 15px 12px;
+            }
+            
+            .resume-header {
+                margin-bottom: 30px;
+                padding-bottom: 20px;
+            }
+            
+            .resume-header h1 {
+                font-size: 1.6rem;
+            }
+            
+            .resume-header .subtitle {
+                font-size: 1rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+            
+            .contact-info a {
+                font-size: 0.8rem;
+            }
+            
+            .section {
+                margin-bottom: 30px;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+                margin-bottom: 15px;
+            }
+            
+            .summary-text {
+                font-size: 0.9rem;
+                line-height: 1.7;
+            }
+            
+            .skill-category {
+                padding: 12px;
+            }
+            
+            .skill-category h4 {
+                font-size: 0.9rem;
+            }
+            
+            .skill-category li {
+                font-size: 0.85rem;
+            }
+            
+            .experience-item,
+            .education-item {
+                padding: 15px;
+            }
+            
+            .job-title {
+                font-size: 1rem;
+            }
+            
+            .company {
+                font-size: 0.9rem;
+            }
+            
+            .date {
+                font-size: 0.85rem;
+            }
+            
+            .job-description {
+                font-size: 0.9rem;
+            }
+            
+            .job-description li {
+                margin-bottom: 6px;
+            }
+            
+            .certificate-item {
+                padding: 12px 15px;
+            }
+            
+            .certificate-info h4 {
+                font-size: 1rem;
+            }
+            
+            .certificate-info p {
+                font-size: 0.85rem;
+            }
+            
+            .certificate-link {
+                font-size: 0.9rem;
+            }
+            
+            .modal-content {
+                max-width: 95%;
+                max-height: 85%;
+            }
+            
+            .close-modal {
+                font-size: 30px;
+                top: -35px;
+            }
+        }
+        
+        /* Large Desktop */
+        @media (min-width: 1400px) {
+            .resume-wrapper {
+                max-width: 1000px;
+            }
+            
+            .code-container {
+                padding: 35px 45px;
+            }
+            
+            .resume-header h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resume-wrapper">
+        <div class="header-actions">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back
+            </a>
+        </div>
+
+        <div class="resume-container">
+            <!-- Card Top with Dots -->
+            <div class="card-top">
+                <div class="circle">
+                    <span class="circle2 red"></span>
+                </div>
+                <div class="circle">
+                    <span class="circle2 yellow"></span>
+                </div>
+                <div class="circle">
+                    <span class="circle2 green"></span>
+                </div>
+                <span class="card-title">resume.txt</span>
+            </div>
+
+            <!-- Code Container -->
+            <div class="code-container">
+                <!-- Header -->
+                <div class="resume-header">
+                    <h1>FAQIH NUR RAHMAN</h1>
+                    <div class="subtitle">Fullstack Software Engineer</div>
+                    <div class="contact-info">
+                        <a href="mailto:faqihrahman704@gmail.com"><i class="fas fa-envelope"></i>
+                            faqihrahman704@gmail.com</a>
+                        <a href="https://wa.me/6282146806738" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-whatsapp"></i> +62 821-4680-6738</a>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i>
+                            LinkedIn</a>
+                        <a href="https://github.com/Laksfaqih" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Summary -->
+                <div class="section">
+                    <h2 class="section-title">Summary</h2>
+                    <p class="summary-text">
+                        Fullstack Software Engineer dengan pengalaman dalam pengembangan aplikasi web
+                        menggunakan Laravel, PHP, JavaScript, dan React. Terbiasa membangun fitur end-to-end mulai dari
+                        frontend, backend, hingga deployment menggunakan Docker & Proxmox. Memiliki kemampuan dalam
+                        debugging, problem solving, dan kolaborasi tim. Adaptif dan selalu antusias mempelajari
+                        teknologi baru
+                        untuk meningkatkan kualitas dan efisiensi pengembangan.
+                    </p>
+                </div>
+
+                <!-- Skills -->
+                <div class="section">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Programming Languages</h4>
+                            <ul>
+                                <li>PHP</li>
+                                <li>Python</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Frontend</h4>
+                            <ul>
+                                <li>React.js</li>
+                                <li>HTML5</li>
+                                <li> CSS3</li>
+                                <li>Tailwind CSS</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Backend</h4>
+                            <ul>
+                                <li>Laravel / PHP</li>
+                                <li>Node.js</li>
+                                <li>RESTful API</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Database</h4>
+                            <ul>
+                                <li>MySQL</li>
+                                <li>PostgreSQL</li>
+                                <li>SQLite</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Tools & DevOps</h4>
+                            <ul>
+                                <li>Git / GitHub</li>
+                                <li>Docker</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Soft Skills</h4>
+                            <ul>
+                                <li>Problem Solving</li>
+                                <li>Team Collaboration</li>
+                                <li>Communication</li>
+                                <li>Time Management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="section">
+                    <h2 class="section-title">Experience</h2>
+
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="job-title">Fullstack Software Engineer</div>
+                                <div class="company">CV. Karya Raya Teknologi (The Code Indonesia)</div>
+                            </div>
+                            <div class="date">Desember 2024 - Present</div>
+                        </div>
+                        <div class="job-description">
+                            <ul>
+                                <li>Mengembangkan landing page pemasaran menggunakan HTML, CSS, dan JavaScript yang
+                                    menerapkan prinsip Responsive Design dan optimasi performa, untuk memaksimalkan
+                                    interaksi pengguna (user engagement).</li>
+                                <li>Merancang dan mengembangkan aplikasi web end-to-end untuk manajemen operasional Haji
+                                    dan Umroh menggunakan Framework Laravel (PHP) dan basis data PostgreSQL, untuk
+                                    memastikan pengelolaan data jemaah yang efisien dan terintegrasi.</li>
+                                <li>Mengimplementasikan fitur strategis pada sistem manajemen pemesanan dan pembayaran
+                                    yang berhasil mengoptimalkan alur kerja, meningkatkan stabilitas sistem, serta
+                                    efisiensi operasional.</li>
+                                <li>Melakukan pengujian manual End-to-End dan berhasil mengidentifikasi,
+                                    menyelesaikan critical bugs serta menjamin performa sistem yang optimal sebelum
+                                    dirilis ke lingkungan produksi (production environment).</li>
+                                <li>Mengelola infrastruktur server dan deployment menggunakan Ubuntu Server, Proxmox,
+                                    dan Docker, menciptakan lingkungan virtualisasi yang terisolasi, terstandarisasi,
+                                    dan memiliki efisiensi pemeliharaan (maintainability) yang tinggi.</li>
+                                <li>Memberikan bimbingan teknis (technical mentorship) kepada pengembang junior dalam
+                                    mengevaluasi konfigurasi environment dan struktur kode, untuk memastikan standar
+                                    kualitas (code quality) dan kemudahan pemeliharaan (maintainability)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="job-title">Fullstack Developer</div>
+                                <div class="company">PT. Digital Solutions</div>
+                            </div>
+                            <div class="date">June 2021 - December 2022</div>
+                        </div>
+                        <div class="job-description">
+                            <ul>
+                                <li>Developed and maintained multiple e-commerce platforms using Laravel and Vue.js</li>
+                                <li>Integrated payment gateways and third-party APIs for enhanced functionality</li>
+                                <li>Collaborated with UI/UX designers to create responsive and user-friendly interfaces
+                                </li>
+                                <li>Implemented automated testing reducing bugs in production by 35%</li>
+                            </ul>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="job-title">Web Developer</div>
+                                <div class="company">Startup Company</div>
+                            </div>
+                            <div class="date">January 2020 - May 2021</div>
+                        </div>
+                        <div class="job-description">
+                            <ul>
+                                <li>Built responsive web applications from scratch using modern JavaScript frameworks
+                                </li>
+                                <li>Worked closely with clients to gather requirements and deliver solutions</li>
+                                <li>Maintained and updated existing codebases improving overall stability</li>
+                                <li>Participated in agile development processes and daily stand-ups</li>
+                            </ul>
+                        </div>
+                    </div> -->
+                </div>
+
+                <!-- Education -->
+                <div class="section">
+                    <h2 class="section-title">Education</h2>
+
+                    <div class="education-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="job-title">Bachelor's Degree in Computer Science</div>
+                                <div class="company">Universitas Ibrahimy</div>
+                            </div>
+                            <div class="date">2022 - Present</div>
+                        </div>
+                        <!-- <div class="job-description">
+                            <p>Graduated with honors. Focused on software engineering, algorithms, and database systems.
+                            </p>
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- Certificates -->
+                <div class="section">
+                    <h2 class="section-title">Certificates</h2>
+
+                    <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h4>Sertifikat Pengembangan Web</h4>
+                            <p>Pelatihan Profesional • Issued 2024</p>
+                        </div>
+                        <a href="#" class="certificate-link" onclick="openModal(event)">View <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+
+                    <!-- <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h4>React - The Complete Guide</h4>
+                            <p>Udemy • Issued 2023</p>
+                        </div>
+                        <a href="#" class="certificate-link">View <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+
+                    <div class="certificate-item">
+                        <div class="certificate-info">
+                            <h4>Node.js Advanced Concepts</h4>
+                            <p>Udemy • Issued 2023</p>
+                        </div>
+                        <a href="#" class="certificate-link">View <i class="fas fa-external-link-alt"></i></a>
+                    </div> -->
+                </div>
+
+                <!-- Language -->
+                <!-- <div class="section">
+                    <h2 class="section-title">Language</h2>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Indonesian</h4>
+                            <ul>
+                                <li>Native Speaker</li>
+                            </ul>
+                        </div>
+                        <! <div class="skill-category">
+                            <h4>English</h4>
+                            <ul>
+                                <li>Professional Working Proficiency</li>
+                            </ul>
+                        </div> -->
+            </div>
+        </div>
+    </div><!-- Close code-container -->
+    </div><!-- Close resume-container -->
+    </div><!-- Close resume-wrapper -->
+
+    <!-- Modal for Certificate Image -->
+    <div id="certificateModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <img src="assets/img/e-certificate.jpg" alt="Certificate">
+        </div>
+    </div>
+
+    <script>
+        function openModal(event) {
+            event.preventDefault();
+            document.getElementById('certificateModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('certificateModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside the image
+        document.getElementById('certificateModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+
+</html>
